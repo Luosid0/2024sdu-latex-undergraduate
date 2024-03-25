@@ -1,0 +1,151 @@
+\documentclass[12pt,a4paper,
+zihao = -4, linespread=1.5]{ctexart}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%宏包%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{iftex}
+\usepackage{amsmath, amsthm, amssymb, mathrsfs,mathtools}
+\usepackage{graphicx,caption,float}
+\usepackage{geometry,fancyhdr}
+\usepackage{appendix}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{tocloft}
+\usepackage[colorlinks,
+linkcolor=blue,       
+anchorcolor=blue,  
+citecolor=blue,        
+]{hyperref}
+\usepackage{cleveref}
+\ifxetex
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{gbt7714}
+\fi
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{tabularx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%宏包%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%环境区%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{prf}{\par\noindent\textbf{证明.}\\}{\par\hfill$\blacksquare$\\}
+
+\newtheorem{de}{定义}
+\crefname{de}{定义}{定义}
+\newtheorem{lem}{引理}
+\crefname{lem}{引理}{引理}
+\newtheorem{coro}{推论}
+\crefname{coro}{推论}{推论}
+\newtheorem{exam}{例}
+\crefname{exam}{例}{例}
+\newtheorem{prop}{命题}
+\newtheorem{thm}{定理}
+\crefname{thm}{定理}{定理}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%环境区%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%短命令%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\elementdo[1]{\mathbf{#1}}%定义域中的元素，黑体向量
+\newcommand\modleset[1]{\mathsf{#1}}
+\newcommand\mode[1]{\mathcal{#1}}
+\newcommand\mylanguage[1]{\mathcal{#1}}%表示L语言
+\newcommand\questionclass[1]{\mathsf{#1}}%复杂性类
+\newcommand\cardinal[1]{\lvert{#1}\rvert}%笛卡尔基
+\newcommand\trt[1]{\mathsf{#1}}%真值表
+\newcommand\func[1]{\mathtt{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%短命令%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%格式设计%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{left=3cm, right=3cm, top=2.5cm, bottom=2.5cm}
+\pagestyle{fancy}
+\fancyhead{\centering\zihao{-5}山东大学
+本科毕业论文（设计）}
+\fancyfoot[C]{\zihao{-5}\thepage}
+\tocloftpagestyle{plain}
+\cfoot{\zihao{-5}\thepage}
+
+\renewcommand\arraystretch{2}%表格高为2倍行距
+%注意：封面使用了表格实现；若有特殊需求，需要分别处理封面和正文表格。
+\newcolumntype{Y}{>{\centering\arraybackslash}X}%解决表格换行的"\\"问题
+
+\ifxetex
+\bibliographystyle{gbt7714-numerical}
+\setlength{\bibsep}{0em}
+\renewcommand*{\bibfont}{\zihao{5}\songti}
+\citestyle{numbers}
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%格式设计%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ctex%%%%%%%%%%%%%%%%%%%%%%
+\ctexset{
+		section = {
+			format += \heiti\zihao{3}\bfseries,
+			beforeskip = 0.8\baselineskip,
+			afterskip = 0.5\baselineskip,
+		},
+		subsection ={
+			format = \heiti\zihao{4}\bfseries,
+			beforeskip = 0.5\baselineskip,
+			afterskip = 0.5\baselineskip,
+		}, 
+		subsubsection ={
+			format = \heiti\zihao{-4}\bfseries,
+			beforeskip = 0.5\baselineskip,
+			afterskip = 0.5\baselineskip,
+		},
+		autoindent= true,
+		contentsname = {\hfill\textbf{\heiti\zihao{-2}目\phantom{哇哇哇哇}录}\hfill},
+		bibname = {\hfill\heiti\zihao{-2}{参考文献}\hfill},
+		appendixname={\hfill\textbf{\heiti\zihao{-2}附\phantom{哇哇哇哇}录}\hfill},	
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ctex%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\ifxetex
+\input{"cover/cover"}
+%\input{"grade_assetion/grade_assetion"}
+\input{"abstractC/abstractC"}
+\input{"abstractE/abstractE"}
+\else
+\include{"cover/cover"}
+%\input{"grade_assetion/grade_assetion"}
+\include{"abstractC/abstractC"}
+\include{"abstractE/abstractE"}
+\fi
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{Roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\ifxetex
+\input{"body/introduction/introduction"}
+\input{"body/section1/section1"}
+\input{"body/section2/section2"}
+\input{"body/conlusion/conlusion"}
+\else
+\include{"body/introduction/introduction"}
+\include{"body/section1/section1"}
+\include{"body/section2/section2"}
+\include{"body/conlusion/conlusion"}
+\fi
+
+\clearpage
+\newpage
+\addcontentsline{toc}{section}{参考文献}
+\ifXeTeX
+	\nocite{*}%这一行能够引用你放在bib中，但未在正文中引用的内容
+	\begin{spacing}{1}
+	\bibliography{ref}
+	\end{spacing}
+\fi
+
+\ifxetex
+\input{"acknowledge/acknowledge"}
+\input{"appendix/appendix"}
+\else
+\include{"acknowledge/acknowledge"}
+\include{"appendix/appendix"}
+\fi
+\end{document}
