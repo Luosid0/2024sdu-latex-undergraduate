@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.10.11)  25 MAR 2024 23:13
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.10.11)  3 APR 2024 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -728,20 +728,9 @@ text;"
 Package xeCJK Warning: Redefining CJKfamily `\CJKrmdefault' (SimSun(0)).
 
 
-Package fontspec Info: Could not resolve font "SimSun/BI" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "SimSun/B" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "SimSun/I" (it probably doesn't
-(fontspec)             exist).
-
-
 Package fontspec Info: Font family 'SimSun(1)' created for font 'SimSun' with
-(fontspec)             options [Script={CJK}].
+(fontspec)             options
+(fontspec)             [Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
@@ -749,6 +738,20 @@ Package fontspec Info: Font family 'SimSun(1)' created for font 'SimSun' with
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->"SimSun/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;embolden=4;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;slant=0.167;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;embolden=4;slant
+=0.167;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+LaTeX Warning: Unused global option(s):
+    [AutoFakeBold,AutoFakeSlant].
 
 (./main.aux)
 \openout1 = `main.aux'.
@@ -891,24 +894,13 @@ Package hyperref Info: Link coloring ON on input line 102.
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
- (./cover/cover.tex
+ (./cover/cover_cyber.tex
 File: pic/cover.jpg Graphic file (type bmp)
 <pic/cover.jpg>
 
-Package fontspec Info: Could not resolve font "SimHei/BI" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "SimHei/B" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: Could not resolve font "SimHei/I" (it probably doesn't
-(fontspec)             exist).
-
-
 Package fontspec Info: Font family 'SimHei(0)' created for font 'SimHei' with
-(fontspec)             options [Script={CJK}].
+(fontspec)             options
+(fontspec)             [Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
@@ -916,26 +908,54 @@ Package fontspec Info: Font family 'SimHei(0)' created for font 'SimHei' with
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->"SimHei/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"SimHei/OT:script=hani;language=dflt;embolden=4;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"SimHei/OT:script=hani;language=dflt;slant=0.167;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"SimHei/OT:script=hani;language=dflt;embolden=4;slant
+=0.167;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd)
-(c:/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd) [1
+(c:/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+
+Package fontspec Info: Font family 'KaiTi(0)' created for font 'KaiTi' with
+(fontspec)             options
+(fontspec)             [Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"KaiTi/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"KaiTi/OT:script=hani;language=dflt;embolden=4;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"KaiTi/OT:script=hani;language=dflt;slant=0.167;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"KaiTi/OT:script=hani;language=dflt;embolden=4;slant=
+0.167;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+ [1
 
 ])
-(./abstractC/abstractC.tex
-
-LaTeX Font Warning: Font shape `TU/SimHei(0)/b/n' undefined
-(Font)              using `TU/SimHei(0)/m/n' instead on input line 3.
-
-) (./abstractE/abstractE.tex [2
+(./abstractC/abstractC.tex) (./abstractE/abstractE.tex [2
 
 ]) [3] (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [1]
-(./body/introduction/introduction.tex) (./body/section1/section1.tex)
+
+[1] (./body/introduction/introduction.tex) (./body/section1/section1.tex)
 (./body/section2/section2.tex) (./body/conlusion/conlusion.tex) [1
 
 ] (./main.bbl) (./acknowledge/acknowledge.tex [2
@@ -946,19 +966,16 @@ LaTeX Font Warning: Font shape `TU/SimHei(0)/b/n' undefined
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47188pt have occurred.
 
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9208C32C41B603FBC2C47A472C80FAB7;642.
  ) 
 Here is how much of TeX's memory you used:
- 21468 strings out of 478607
- 465019 string characters out of 5846786
+ 21495 strings out of 478607
+ 464875 string characters out of 5846786
  1853012 words of memory out of 5000000
- 41229 multiletter control sequences out of 15000+600000
- 524809 words of font info for 126 fonts, out of 8000000 for 9000
+ 41253 multiletter control sequences out of 15000+600000
+ 524849 words of font info for 131 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 89i,12n,97p,3245b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,12n,97p,3245b,637s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (8 pages).
