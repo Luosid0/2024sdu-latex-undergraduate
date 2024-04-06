@@ -23,6 +23,35 @@ citecolor=blue,
 \usepackage{setspace}
 \usepackage{array}
 \usepackage{tabularx}
+
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=[ANSI]{C},
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+%支持算法环境
+\usepackage[boxed,ruled,lined,linesnumbered]{algorithm2e}
+\usepackage{algorithmic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%宏包%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%环境区%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,6 +82,14 @@ citecolor=blue,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%短命令%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%格式设计%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}     % 使图编号为 7.1 的格式 %\protect{~}
+\renewcommand{\thetable}{\arabic{section}-\arabic{table}}      % 使表编号为 7-1 的格式 %\protect{~}
+\usepackage{caption}  % 设置表格/图片序号后面为空格
+\DeclareCaptionLabelSeparator{quad}{\quad}
+\captionsetup{labelsep=quad}
+
+
 \geometry{left=3cm, right=3cm, top=2.5cm, bottom=2.5cm}
 \pagestyle{fancy}
 \fancyhead{\centering\zihao{-5}山东大学
