@@ -23,11 +23,13 @@ citecolor=blue,
 \usepackage{setspace}
 \usepackage{array}
 \usepackage{tabularx}
-
-
 \usepackage{listings}
 \usepackage{color}
+\usepackage[boxed,ruled,lined,linesnumbered]{algorithm2e}
+\usepackage{algorithmic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%宏包%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%表格与代码%%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
@@ -49,10 +51,11 @@ citecolor=blue,
   tabsize=3
 }
 
-%支持算法环境
-\usepackage[boxed,ruled,lined,linesnumbered]{algorithm2e}
-\usepackage{algorithmic}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%宏包%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}     % 使图编号为 7.1 的格式 %\protect{~}
+\renewcommand{\thetable}{\arabic{section}-\arabic{table}}      % 使表编号为 7-1 的格式 %\protect{~}
+\DeclareCaptionLabelSeparator{quad}{\quad}
+\captionsetup{labelsep=quad}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%表格与代码%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%环境区%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{prf}{\par\noindent\textbf{证明.}\\}{\par\hfill$\blacksquare$\\}
@@ -71,32 +74,25 @@ citecolor=blue,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%环境区%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%短命令%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand\elementdo[1]{\mathbf{#1}}%定义域中的元素，黑体向量
-\newcommand\modleset[1]{\mathsf{#1}}
-\newcommand\mode[1]{\mathcal{#1}}
-\newcommand\mylanguage[1]{\mathcal{#1}}%表示L语言
-\newcommand\questionclass[1]{\mathsf{#1}}%复杂性类
 \newcommand\cardinal[1]{\lvert{#1}\rvert}%笛卡尔基
-\newcommand\trt[1]{\mathsf{#1}}%真值表
-\newcommand\func[1]{\mathtt{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%短命令%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%格式设计%%%%%%%%%%%%%%%%%%%%%%%
-
-\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}     % 使图编号为 7.1 的格式 %\protect{~}
-\renewcommand{\thetable}{\arabic{section}-\arabic{table}}      % 使表编号为 7-1 的格式 %\protect{~}
-\usepackage{caption}  % 设置表格/图片序号后面为空格
-\DeclareCaptionLabelSeparator{quad}{\quad}
-\captionsetup{labelsep=quad}
-
-
 \geometry{left=3cm, right=3cm, top=2.5cm, bottom=2.5cm}
-\pagestyle{fancy}
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyfoot[C]{\zihao{-5}\thepage}
+\renewcommand\headrulewidth{0pt}
+\renewcommand\footrulewidth{0pt}
+}
+\fancypagestyle{body}{
+\fancyhf{}
+\fancyfoot[C]{\zihao{-5}\thepage}
 \fancyhead{\centering\zihao{-5}山东大学
 本科毕业论文（设计）}
-\fancyfoot[C]{\zihao{-5}\thepage}
-\tocloftpagestyle{plain}
-\cfoot{\zihao{-5}\thepage}
+\renewcommand\headrulewidth{0.6pt}
+\renewcommand\footrulewidth{0pt}
+}
 
 \renewcommand\arraystretch{2}%表格高为2倍行距
 %注意：封面使用了表格实现；若有特殊需求，需要分别处理封面和正文表格。
@@ -154,10 +150,11 @@ citecolor=blue,
 \newpage
 \setcounter{page}{1}
 \pagenumbering{Roman}
+\pagestyle{plain}
 \tableofcontents
 \clearpage
 \pagenumbering{arabic}
-
+\pagestyle{body}
 \ifxetex
 \input{"body/introduction/introduction"}
 \input{"body/section1/section1"}
